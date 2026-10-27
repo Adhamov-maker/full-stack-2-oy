@@ -627,17 +627,98 @@
 // 93.Funksiyaga string va son berilsa, ushbu stringning oxirigi
 // belgisini funksiya son marta takrorlab qaytarib bersin.
 
-function namuna(word, son) {
-  let harf = word.split("");
-  return word.padEnd(son, `${harf.length - 1}`);
-}
-console.log(namuna("Hello", 3));
+// function namuna(word, son) {
+//   let harf = word.split("");
+//   for (let i = 0; i < son; i++) {
+//     harf.push(harf[harf.length - 1]);
+//   }
+//   return harf.join("");
+// }
+// console.log(namuna("Hello", 3));
 
 // ==================================================================================
+
+// 94.Funksiyaga sonlar massivi berilsa, Ana shu massivdagi 5dan
+// katta bo’lgan elementlarni yig’indiisini qaytarsin.
+
+// function namuna(arr) {
+//   let sum = 0;
+//   for (let i of arr) {
+//     if (i > 5) {
+//       sum += i;
+//     }
+//   }
+//   return sum;
+// }
+
+// yoki boshqa yol
+// function namuna1(arr) {
+//   return arr.reduce((sum, i) => (i > 5 ? sum + i : sum),0);
+// }
+// console.log(namuna1([1, 5, 20, 30, 4, 9, 18]));
+
 // ==================================================================================
+
+// 95.Funksiyaga massiv berilsa, ushbu funksiya massiv element-
+// larini barchasini yig’indisini qaytarsin.
+
+// function Namuna(arr){
+//   return arr.reduce((sum,i) => sum+i,0)
+// }console.log(Namuna([2, 7, 4]));
+
 // ==================================================================================
+
+// 96.Funksiyaga faylning manzili kiritiladi. Funksiya ushbu
+// ma’lumotdan faylining nomi ajratib bersin.
+
+// function Namuna(str){
+//   return str.slice(str.lastIndexOf("/")+1)
+// }console.log(Namuna("C:/Projects/pil_tests/ascii/edabit.txt"));
+
 // ==================================================================================
+
+// 97.Doston uyidan masofalar bosib o’tadi. Uyidan yo oldinga
+// yoki orqaga. Bosib o’tilgan masoflar massivi funksiya berilsa,
+// funksiya Doston uyiga qaytishi uchun qancha masofa bosib
+// o’tishini aytsin.
+
+// function Namuna(arr) {
+//   let musbat = arr.filter((i) => i > 0);
+//   let manfiy = arr.filter((i) => i < 0);
+//   let jami1 = musbat.reduce((sum, i) => sum + i, 0);
+//   let jami2 = manfiy.reduce((sum, i) => sum + i, 0);
+//   return jami1 == 0 ? -jami2 : jami1 + jami2;
+// }
+// console.log(Namuna([3, 4, -5, -2]));
+
 // ==================================================================================
+
+// 98.Funksiya uchburchakning tomonlari argument qilib beriladi.
+// Agar ushbu berilgan tomonlardan uchburchak yasab bo’lsa
+// unda funksiya true qaytarsin, aks holda false. Uchburchakning
+// qoida, istalgan 2ta tomonining yig’igindisi uchunchi tomondan
+// katta bo’lsagina uchburchak hosil bo’ladi.
+
+// function Namuna(a, b, c) {
+//   return a + b > c && a + c > b && c + b > a ? true : false;
+// }
+// console.log(Namuna(4, 3, 8));
+
 // ==================================================================================
+
+// 99.Funksiya 2 son oralig’gini qabul qilsa, ushbu 2ta son
+// orasidagi sonlardan tuzilgan massivni ushbu funksiya
+// qaytarsin.
+
+// function Namuna(son1,son2){
+//   let arr = []
+//   for (let i = son1+1;i<son2;i++){
+//     arr.push(i)
+//   }return arr
+// }console.log(Namuna(2, 4));
+
 // ==================================================================================
+// 100.Quyidagi namunani kuzatgan holda funksiya yasang.
+// Namuna:
+// Namuna("div*2") ᔍ "<div></div><div></div>"
 // ==================================================================================
