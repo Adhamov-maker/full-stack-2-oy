@@ -54,3 +54,5 @@ const products = [
 
 let high10 = products.filter((i) => i.discount >= 10);
 // console.log(high10);
+let upperPrice = products.sort((a, b) => a.price - b.price);
+console.log(upperPrice);
