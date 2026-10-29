@@ -9,7 +9,8 @@ function addUser(arr, name, lastname, age, job, email, password) {
     email,
     password,
   };
-    return [...arr, newUser];
+  arr.push(newUser);
+  return newUser;
 }
 
 console.log(
