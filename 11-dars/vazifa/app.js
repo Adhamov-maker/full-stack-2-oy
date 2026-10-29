@@ -8,10 +8,10 @@ const products = [
 ];
 const students = [
   { id: 1, name: "Ali", age: 18, score: 85 },
-  { id: 2, name: "Vali", age: 17, score: 52 },
+  { id: 2, name: "Vali", age: 17, score: 42 },
   { id: 3, name: "Madina", age: 19, score: 95 },
-  { id: 4, name: "Sardor", age: 18, score: 67 },
-  { id: 5, name: "Aziza", age: 17, score: 43 },
+  { id: 4, name: "Sardor", age: 18, score: 27 },
+  { id: 5, name: "Aziza", age: 17, score: 47 },
   { id: 6, name: "Jasur", age: 20, score: 76 },
 ];
 
@@ -74,9 +74,90 @@ const students = [
 // Natijaga qarab “Omborda tugagan mahsulot bor” yoki “Barcha mahsulotlar mavjud” xabarini chiqaring.
 // some() metodidan foydalaning.
 
+// let mahsulotBormi = products.some((i) => i.stock === 0);
+
+// if (mahsulotBormi) {
+//   console.log("omdorda tugagan mahsulot bor");
+// } else console.log("omborda barcha mahsulotlar mavjud");
 
 // =============================================================================
+
+// 6-masala. Barcha talabalar imtihondan o‘tganmi?
+// Qiyinlik: 4/10
+// Imtihondan o‘tish uchun talaba kamida 60 ball olishi kerak. Barcha talabalar 60 yoki undan yuqori ball
+// olganini tekshiring. Natija true yoki false bo‘lsin va mos xabar chiqaring.
+// every() metodidan foydalaning.
+
+// let otganmi = students.every((i) => i.score > 60);
+// if (otganmi) {
+//   console.log(true);
+// } else console.log(false);
 // =============================================================================
+
+// 7-masala. Mahsulotlarni narx bo‘yicha saralash
+// Qiyinlik: 5/10
+// products massivini narxi bo‘yicha eng arzondan eng qimmatga qarab saralang. Mahsulot nomi va narxini
+// chiqaring.
+// sort() metodidan foydalaning. Eslatma: sort() massivni o‘z joyida o‘zgartiradi.
+
+// function tartibla(arr) {
+//   let tartibla = arr.sort((a, b) => a.price - b.price);
+//   return tartibla.forEach((element) => {
+//     console.log(`${element.name}ning narxi - ${element.price}$ ga teng`);
+//   });
+// }
+// console.log(tartibla(products));
+
 // =============================================================================
+
+// 8-masala. Yuqori ball olgan talabalar
+// Qiyinlik: 5/10
+// students massivida 70 va undan yuqori ball olgan talabalarni ajrating. Ularni ballari bo‘yicha kamayish
+// tartibida saralang. Natijada faqat talabalarning ismi va balli bo‘lgan yangi massiv hosil qiling.
+// filter(), sort() va map() metodlaridan foydalaning.
+
+// function sarala(arr) {
+//   let tozala = arr.filter((i) => i.score >= 70);
+//   let tartibla = tozala.sort((a, b) => b.score - a.score);
+//   return tartibla.map((i) => ({ name: i.name, score: i.score }));
+// }
+
+// console.log(sarala(students));
+
 // =============================================================================
+
+// 9-masala. Chegirmali mahsulotlarni tekshirish
+// Qiyinlik: 7/10
+// products massividan chegirmasi 10% yoki undan yuqori bo‘lgan mahsulotlarni ajrating. Ularning
+// chegirmadan keyingi narxini hisoblang. So‘ng chegirmadan keyingi narxi 800 dollardan yuqori bo‘lgan
+// mahsulot bor-yo‘qligini tekshiring. Mahsulotlar ro‘yxati va tekshiruv natijasini chiqaring.
+// filter(), map() va some() metodlaridan foydalaning.
+
+// function chegirmali(arr) {
+//   let tozala = arr.filter((i) => i.discount >= 10);
+//   let hisobla = tozala.map((i) => ({
+//     ...tozala,
+//     finalPrice: i.price - (i.discount * i.price) / 100,
+//   }));
+
+//   let chiqar = hisobla.filter((i) => i.finalPrice > 800);
+//   console.log(chiqar);
+
+//   let aniqla = hisobla.some((i) => i.finalPrice > 800);
+
+//   return aniqla;
+// }
+// console.log(chegirmali(products));
+
 // =============================================================================
+
+// 10-masala. Talabalar natijasi bo‘yicha tahlil
+// Qiyinlik: 8/10
+// students massivi bilan quyidagi ishlarni bajaring: 1) 60 yoki undan yuqori ball olgan talabalarni ajrating; 2)
+// ularni ballari bo‘yicha kamayish tartibida saralang; 3) map() orqali ism va ballni yangi massivga o‘tkazing; 4)
+// find() bilan 90 dan yuqori ball olgan birinchi talabani toping; 5) some() bilan kamida bitta talaba 90 dan
+// yuqori ball olganini tekshiring; 6) every() bilan barcha talabalar 40 yoki undan yuqori ball olganini
+// tekshiring; 7) forEach() yordamida har bir talabaning ismi va ballini alohida chiqaring.
+
+
+
