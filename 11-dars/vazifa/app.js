@@ -159,5 +159,20 @@ const students = [
 // yuqori ball olganini tekshiring; 6) every() bilan barcha talabalar 40 yoki undan yuqori ball olganini
 // tekshiring; 7) forEach() yordamida har bir talabaning ismi va ballini alohida chiqaring.
 
+// function allamBalo(arr) {
+//   let ajartish1 = arr
+//     .filter((i) => i.score > 60)
+//     .sort((a, b) => b.score - a.score);
+//   let yangilash = ajartish1.map((i) => ({ name: i.name, score: i.score }));
+//   let findhigh = yangilash.find((i) => i.score > 90);
+//   console.log(findhigh);
+//   let find = yangilash.some((i) => i.score > 90);
+//   console.log(find);
+//   let findevery = yangilash.every((i) => i.score > 40);
+//   console.log(findevery);
 
-
+//   return yangilash.forEach((i) => {
+//     console.log(`${i.name} -- ${i.score} ball yig'gan`);
+//   });
+// }
+// console.log(allamBalo(students));
